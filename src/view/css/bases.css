@@ -1,0 +1,46 @@
+.wt100{
+    width: 100%;
+}
+.flexct{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+.flexsa{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+.flexlb{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start;
+}
+.flexfs{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flexcolct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flexcolfs{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* 屏幕宽度小于576个象素时应用的CSS样式   */
+@media (max-width: 576px) {  
+    .mobilenone{
+        display: none;
+    }
+} 
