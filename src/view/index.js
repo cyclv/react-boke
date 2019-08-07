@@ -1,20 +1,28 @@
 import React,{Component} from 'react';
+import {BrowserRouter as Router,Route,Redirect,NavLink} from 'react-router-dom';
 import logo from '../logo.svg';
 import './css/layout.css';
 import './css/bases.css';
+import Boke from '../view/boke';
+import BokeDetail from '../view/bokeDetail';
+import BokeClassify from '../view/bokeClassify';
+import Excellent from '../view/excellent';
 class Index extends Component{
     inputchange = (e)=>{
         console.log(e.target.value)
     }
     render(){
         return (
-            <div className='boke'>
+            <Router className='boke'>
                 <header className="boke-header flexct">
                     <div className='info flexlb'>
                         <img src={logo} className="left" alt="logo" />
                         <div className="right flexfs">
                             <div className='list'><input onChange={(e)=>this.inputchange(e)} placeholder='输入该兴趣内容'></input> </div>
-                            <div className='list mobilenone flexfs'><div className='navlist'>首页</div><div className='navlist'>文章</div><div className='navlist'>推荐</div></div>
+                            <div className='list mobilenone flexfs'>
+                                <NavLink className='navlist' to='/home' activeStyle={{fontWeight: "bold",color: "red"}}>首页</NavLink>
+                                <NavLink className='navlist' to='/BokeClassify' activeStyle={{fontWeight: "bold",color: "red"}}>文章</NavLink>
+                                <NavLink className='navlist' to='/excellent' activeStyle={{fontWeight: "bold",color: "red"}}>推荐</NavLink></div>
                         </div>
                     </div>
                 </header>
@@ -22,17 +30,11 @@ class Index extends Component{
                     {/* 中心内容 */}
                     <div className='center flexcollb'>
                         <div className='left flexcolct'>
-                            <div className='boke-list'>
-                                <div>
-                                    <div className='info'>源码阅读(1)：Java中主要的List结构——概述</div>
-                                    <div className='info'>
-        典型的数据结构中，对于“表”结构的定义是：在一维空间下元素按照某种逻辑结构进行线性连接排列的数据结构（一对一）。
-        java中集合定义中所包括的链表（ArrayList）、链表（LinkedList）、各种队列（Queue/Deque）、栈（Stack）等都满足这样的定义。
-        本文及后续的几篇文章中将介绍Java集合结构中关于List接口、Queue接口、Set接口下的重要实现类。                    
-                                    </div>
-                                    <div className='info'>2019年 08月06日</div>
-                                </div>
-                            </div>    
+                            <Redirect path="/" to={{pathname: '/home'}} />
+                            <Route exact path="/home" component={Boke} />
+                            <Route path="/bokeDetail" component={BokeDetail} />
+                            <Route path="/bokeClassify" component={BokeClassify} />
+                            <Route path="/excellent" component={Excellent} />
                         </div>
                         <div className='right'>
                             右侧菜单
@@ -40,10 +42,8 @@ class Index extends Component{
                         
                     </div>
                 </main>
-            </div>
+            </Router>
         );
-    }
-  
+    } 
 }
-
 export default Index;

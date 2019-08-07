@@ -1,3 +1,11 @@
+a{
+    list-style-type: none;
+    text-decoration: none;
+    color: #000000;
+}
+a:hover{
+    color: aqua;
+}
 .wt100{
     width: 100%;
 }
@@ -43,7 +51,13 @@
     justify-content: flex-start;
     align-items: center;
 }
-
+.flexfswrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap:wrap;
+}
 /* 屏幕宽度小于576个象素时应用的CSS样式   */
 @media (max-width: 576px) {  
     .mobilenone{
