@@ -14,12 +14,26 @@
     margin-top: 10px;
 }
 .excellent .info{
-    width: 130px;
+    /* width: 130px; */
     height: 60px;
     border: 1px solid #f5f5f5;
     margin-left: 10px;
     margin-top: 10px;
+    padding: 0px 10px;
 }
 .excellent .info:hover{
     border: 1px solid #999595;
 }
+.excellent img{
+    width: 40px;
+    height: 40px;
+}
+.excellent .right-info{
+    margin-left: 5px;
+}
+.excellent .right-info:first-child{
+  font-size: 16px;
+}
+.excellent .right-info:nth-child(2){
+    font-size: 14px;
+  }

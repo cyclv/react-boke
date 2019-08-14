@@ -4,8 +4,12 @@
     border-radius: 5px;
     margin-bottom: 20px;
 }
+.bkgdffff{
+    background: #ffffff;
+}
 .boke-list{
-    padding: 10px;
+    height: 100%;
+    padding: 10px 0px;
     background: #ffffff;
     border-radius: 5px;
 }
@@ -41,8 +45,26 @@
    line-height: 20px;
 }
 .boke-list .boke-info{
+    width: 96%;
     margin-bottom: 20px;
 }
 .boke-list .boke-info:last-child{
     margin-bottom: 0px;
+}
+.boke-classify .classify-list{
+    padding: 5px 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.boke-classify .selected{
+    background: red;
+    color: white;
+    border-radius: 10px;
+}
+/* boke富文本展示 */
+.boke-detail{
+    background: #ffffff;
+}
+.detail-inf0{
+    width: 95%;
 }

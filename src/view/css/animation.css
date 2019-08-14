@@ -1,0 +1,42 @@
+.move-in-left{
+    animation:mymove 2s;
+	animation-iteration-count:1;
+	animation-fill-mode:forwards;
+	/* Safari 和 Chrome */
+	-webkit-animation:mymove 2s;
+	-webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+    z-index: 5;
+}
+@keyframes mymove
+{
+	from {right:-120px;}
+	to {right:0px;}
+}
+
+@-webkit-keyframes mymove /* Safari 和 Chrome */
+{
+	from {right:-120px;}
+	to {right:0px;}
+}
+.move-out-left{
+    animation:navmoveout 3s;
+	animation-iteration-count:1;
+	animation-fill-mode:forwards;
+	/* Safari 和 Chrome */
+	-webkit-animation:navmoveout 3s;
+	-webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+    z-index: 5;
+}
+@keyframes navmoveout
+{
+	from {right:0px;}
+	to {right:-120px;}
+}
+
+@-webkit-keyframes navmoveout /* Safari 和 Chrome */
+{
+	from {right:0px;}
+	to {right:-120px;}
+}

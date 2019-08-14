@@ -4,10 +4,13 @@ a{
     color: #000000;
 }
 a:hover{
-    color: aqua;
+    color: red;
 }
 .wt100{
     width: 100%;
+}
+.mgt20{
+    margin-top: 20px;
 }
 .flexct{
     display: flex;
@@ -54,13 +57,28 @@ a:hover{
 .flexfswrap{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap:wrap;
+} 
+.flexfswrapfs{
+    display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap:wrap;
-}
+} 
 /* 屏幕宽度小于576个象素时应用的CSS样式   */
 @media (max-width: 576px) {  
     .mobilenone{
         display: none;
     }
-} 
+    .pcnone{
+        display: block;
+    }
+}
+@media (min-width: 576px) {  
+    .pcnone{
+        display: none;
+    }
+}
